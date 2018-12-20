@@ -18,11 +18,12 @@ node ('master') {
     
     stage ('Email Notification') {
     
-          mail bcc: '', body: '''Hi Team,
+         mail bcc: '', body: '''Hi Team,
 
-          Job is successful
+         Job is successful
 
-          Thanks''', cc: '', from: '', replyTo: '', subject: 'Test email from jenkins', to: 'srinidhi.kumar94@outlook.com'
+         Thanks''', cc: '', from: 'test@jenkins.com', replyTo: '', subject: 'Test email from jenkins', to: 'srinidhi.kumar94@outlook.com'
+
 
     }
 }
