@@ -1,3 +1,6 @@
+
+def mvnHome = tool name: 'maven-3.6.0', type: 'maven'
+
 node {
 
     stage ('SCM checkout') {
@@ -8,7 +11,7 @@ node {
     
     stage ('Compile-Package') {
     
-          sh 'mvn clean package'
+          sh "${mvnHome}/bin/mvn clean package"
           
     }
     
