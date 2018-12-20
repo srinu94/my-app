@@ -1,7 +1,7 @@
 
 
 
-node {
+node ('master') {
   
     def mvnHome = tool name: 'maven-3.6.0', type: 'maven'
     stage ('SCM checkout') {
