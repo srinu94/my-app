@@ -1,8 +1,9 @@
 
-def mvnHome = tool name: 'maven-3.6.0', type: 'maven'
+
 
 node {
-
+  
+    def mvnHome = tool name: 'maven-3.6.0', type: 'maven'
     stage ('SCM checkout') {
         
           git 'https://github.com/srinu94/my-app'
