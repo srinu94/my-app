@@ -31,7 +31,7 @@ node ('master') {
     
           slackSend baseUrl: 'https://hooks.slack.com/services/', 
           channel: 'jenkins_pipeline', 
-          color: 'good', message: 'this is just a test message', 
+          color: 'danger', message: 'this is just a test message', 
           teamDomain: 'developmentjenkins', tokenCredentialId: 'Slack'
     }
 }
