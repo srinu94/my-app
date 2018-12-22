@@ -17,9 +17,9 @@ node ('master') {
     }
     
     stage ('Sonar Ananlysis') {
-    
+       withSonarQubeEnv ('sonar-6.7.5') {
           sh "${mvnHome}/bin/mvn sonar:sonar"
-          
+       }   
     }
     
     stage ('Email Notification') {
