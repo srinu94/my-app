@@ -11,7 +11,7 @@
     stage ('Sonar Analysis') {
      
       def mvnHome =  tool name: 'maven-3', type: 'maven'
-      sh "${mvnHome}/bin/mvn sonar:sonar
+      sh "${mvnHome}/bin/mvn sonar:sonar"
        
     }
    stage('Email Notification'){
