@@ -16,6 +16,12 @@ node ('master') {
           
     }
     
+    stage ('Sonar Ananlysis') {
+    
+          sh "${mvnHome}/bin/mvn sonar:sonar"
+          
+    }
+    
     stage ('Email Notification') {
     
          mail bcc: '', body: '''Hi Team,
