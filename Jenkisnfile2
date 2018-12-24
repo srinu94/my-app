@@ -1,6 +1,6 @@
 
 
-properties([parameters([choice(choices: ['master\nfeature1\nfeature2'], description: '', name: 'branch')])])
+properties([parameters([choice(choices: 'master\nfeature1\nfeature2', description: 'Select the branch to build', name: 'branch')])])
 
 node ('master') {
   
