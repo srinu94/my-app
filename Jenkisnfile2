@@ -2,6 +2,8 @@
 
 
 node ('master') {
+
+    properties([parameters([choice(choices: ['master', 'feature1', 'feature2'], description: '', name: 'branch')])])
   
     def mvnHome = tool name: 'maven-3.6.0', type: 'maven'
     stage ('SCM checkout') {
